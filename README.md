@@ -1,7 +1,7 @@
 # visible.js
 Lightweight javascript module fordetecting presence of DOM element on screen
 
-# Usage
+# Usage :octocat:
 ```javascript
 var checker = new Checker('.lazy');
 
@@ -16,3 +16,4 @@ checker.addActionOnInVisible(function (elem) {
     elem.style.background = "gray"; 
 });
 ```
+:octocat::octocat::octocat:
