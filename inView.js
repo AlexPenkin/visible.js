@@ -5,7 +5,6 @@ function Checker(query) {
     this.elements = document.querySelectorAll(query);
     if (this.elements.length < 1) {
         throw new Error(`Have not found any element with selector '${query}'`);
-        return;
     }
 
     function scroller(e) {
@@ -26,10 +25,18 @@ function Checker(query) {
             pT = wT + cRect.top;
             pB = pT + cRect.height;
 
-            if (wT < pB && wB > pT) {
-                that.callBackOnVisible(that.elements[p]);
+            if (wT < pB && wB > pT) {               
+                if (!that.elements[p].visble) {
+                    that.elements[p].inVisble = false;
+                    that.callBackOnVisible(that.elements[p]);
+                    that.elements[p].visble = true;
+                }
             } else {
-                that.callBackOnInVisible(that.elements[p]);
+                if (!that.elements[p].inVisble) {
+                    that.elements[p].visble = false;
+                    that.callBackOnInVisible(that.elements[p]);
+                    that.elements[p].inVisble = true;
+                }
             }
             p++;
         }
