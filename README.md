@@ -16,4 +16,5 @@ checker.addActionOnInVisible(function (elem) {
     elem.style.background = "gray"; 
 });
 ```
+[Example on CodePen](http://codepen.io/modestDev/pen/evWKwY) 
 :octocat: :octocat: :octocat:
