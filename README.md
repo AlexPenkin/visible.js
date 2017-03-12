@@ -1,5 +1,5 @@
 # visible.js
-Lightweight javascript module fordetecting presence of DOM element on screen
+Lightweight javascript module for detecting presence of DOM element on screen
 
 # Usage 
 ```javascript
